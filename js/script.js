@@ -7,6 +7,17 @@ function Pizza(toppings, size) {
   this.size = size;
 } 
 
+Pizza.prototype.checkedToppings = function() {
+  let toppings = 0;
+  if (this.toppings === "ham") {
+    return ham;
+  } else if (this.toppings === "pineapple") {
+    return pineapple;
+  } else {
+    alert ("please add toppings")
+  }
+}
+console.log(numToppings);
 //add toppings to Pizza
 Pizza.prototype.toppingsAmount = function() {
   if (this.toppings.length != 0){
@@ -41,8 +52,14 @@ Pizza.prototype.calculateCost = function(totalAmount, sizePrice) {
 
 //UI Logic
 function displayIn() {
-  let size = document.querySelector("sizes-input").value;
+  let size = document.querySelector("sizes-input;checked").value;
   let toppings = [];
+  let checkedToppings = document.querySelectorAll(".toppings-input:checked);
+  checkedToppings.forEach(function(topping){
+    toppings.push(topping.value);
+  });
+  let pizza = new Pizza(toppings, size);
+  let totalAmount = pizza.toppingsAmount();
 }
 
 window.addEventListener("load", function () {

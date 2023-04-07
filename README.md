@@ -36,6 +36,13 @@ code: const totalCost = myPizza.calculateCost(10, 5);
         console.log(totalCost); 
 output: 15
 
+
+Description: Create function to check toppings.
+test: 
+code: 
+output:
+
+
 Licensse
 
 MIT Copyright () Hernan Verar.

@@ -25,6 +25,8 @@ Pizza.prototype.sizePrice = function() {
     price = 18.50;
   } else if (this.size === "large") {
     price = 20.69
+  } else {
+    alert ("please choose your Pizza size");
   }
   this.sizePrice = price;
   return this.sizePrice;
@@ -32,3 +34,8 @@ Pizza.prototype.sizePrice = function() {
 // const largePizza = new Pizza("large");
 // largePizza.sizePrice();
 // console.log(largePizza.sizePrice === 20.69);
+
+// add Price to our Pizza
+Pizza.prototype.calculateCost = function(totalAmount, sizePrice) {
+  let totalCost = totalAmount + sizePrice;
+}

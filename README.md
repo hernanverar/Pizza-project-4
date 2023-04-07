@@ -1,8 +1,8 @@
 Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const myPizza = new Pizza(["ham", "pineapple"], "small",);
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "small" }
+Code: const Pizza = new Pizza(["ham", "pineapple"], "small",);
+Expected Output: Pizza { toppings: ["ham", "pineapple"], size: "small" }
 
 //
 Description: Create constructor function with two properties (toppings, and size)
@@ -29,6 +29,12 @@ console.log(largePizza.sizePrice === 20.69);
 
 code: Pizza.prototype.sizePrice = function()
 output: True
+
+Description: Create calculate prices function
+test: const myPizza = new Pizza();
+code: const totalCost = myPizza.calculateCost(10, 5);
+        console.log(totalCost); 
+output: 15
 
 
 Licensse

@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-  <title>Pizza Coxala</title>
-</head>
-<body>
-  <h1>Welcome to Pizza Coxala</h1>
-  
-</body>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Pizza Coxala</title>
+  </head>
+  <body>
+    <h1>Welcome to Pizza Coxala</h1>
+
+
+    <form id="pizza-parlor">
+    <div class="form-group">
+        <label for="name">Please print your Name :</label>
+          <input type="text"  class="form-control" id="name" placeholder="Name">
+    </div>
+
+    <div>
+      <label for="toppings">Number of Toppings : </label>
+      <select id="toppings" class="form-control">
+        <option selected>Choose your toppings</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+
+    <div class="form-check">
+      <label for="chooseToppings"
+        ><strong><em>Choice of Toppings:</em></strong></label>
+        <br>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value="Ham"
+        name="toppingCheck"/>
+    
+      <label class="form-check-label" for="ham">ham</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="pineapple" name="toppingCheck" >
+        <label class="form-check-label" for="pineapple">pineapple</label>
+  </div>
+
+  <div class="form-check">
+    <label for="chooseToppings"><strong><em>Choose the size of your Pizza:</em></strong></label><br>
+
+<form id="sizes">
+  <div class="sizes-input">
+        <input class="from-sizes-input" type="radio" value="small" name="pizza-size">
+      <label class="form-sizes-label" for="small"> Small</label>
+
+  <div class="sizes-input">
+    <div class="sizes-input">
+        <input class="form-sizes-input" type="radio" value="medium" name="pizza size">
+      <label class="from-sizes-label" for="medium">Medium</label>
+
+  <div class="sizes-input">
+      <div class="sizes-input">
+          <input class="form-sizes-input" type="radio" value="large" name="pizza-size">
+      <label classs="form-sizes-label" for="large">Large</label>   
+</form>
+
+<form>
+  </div><br><button type="submit" class="btn-primary" id="btn-       submit">submit</button>
+</form>
+</from>
+<br>
+    <div class="footer">Thank You Have a Nice Day !!!</div>
+  </body>
 </html>

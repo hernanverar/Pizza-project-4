@@ -36,7 +36,6 @@ code: const totalCost = myPizza.calculateCost(10, 5);
         console.log(totalCost); 
 output: 15
 
-
 Licensse
 
 MIT Copyright () Hernan Verar.

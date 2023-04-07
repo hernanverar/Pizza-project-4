@@ -40,10 +40,14 @@ Pizza.prototype.calculateCost = function(totalAmount, sizePrice) {
 }
 
 //UI Logic
+function displayIn() {
+  let size = document.querySelector("sizes-input").value;
+  let toppings = [];
+}
+
 window.addEventListener("load", function () {
   document.getElementById("pizza-parlor").addEventListener("submit", function(){
     e.preventDefault();
     displayIn();
   });
-  
 })

@@ -5,7 +5,7 @@ Code: const myPizza = new Pizza(["ham", "pineapple"], "small",);
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "small" }
 
 //
-Description: create constructor function with two properties (toppings, and size)
+Description: Create constructor function with two properties (toppings, and size)
 test: console.log(Pizaz) 
 code: function Pizaa (toppings, size)
 output: function Pizza(toppings, size) {
@@ -15,7 +15,22 @@ output: function Pizza(toppings, size) {
            console.log(Pizza); 
 
 //
-Description: create Pizza prototype function()
+Description: Create Pizza prototype function
 test: Reload Page
 code: Pizza.prototype.toppingsAmount = function()
 output: alert ("Please choose your toppings!");
+
+//
+Description: Create size prices function
+
+test: const largePizza = new Pizza("large");
+largePizza.sizePrice();
+console.log(largePizza.sizePrice === 20.69);
+
+code: Pizza.prototype.sizePrice = function()
+output: True
+
+
+Licensse
+
+MIT Copyright () Hernan Verar.

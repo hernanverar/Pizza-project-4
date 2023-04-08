@@ -10,7 +10,7 @@
 
     <img src="css/pizza.pic2.jpeg">
 
-    <form id="pizza-parlor">
+    <form id="pizza-parlor-form">
     <div class="form-group">
         <label for="name">Please print your Name :</label>
           <input type="text"  class="form-control" id="name" placeholder="Name">
@@ -32,26 +32,29 @@
         <label class="form-check-label" for="pineapple">pineapple</label>
   </div>
   <br>
+  <img src="css/pizaa3.pic,jpeg.jpeg">
   <div class="form-check">
     <label for="chooseToppings"><strong><em>Choose the size of your Pizza:</em></strong></label><br>
 <form id="sizes">
   <div class="sizes-input">
-        <input class="from-sizes-input" type="radio" value="small" name="pizza-size">
-      <label class="form-sizes-label" for="small"> Small</label>
+        <input class="from-sizes-input" type="radio" name="pizza-size">
+      <label class="form-sizes-label" for="small" value="small"> Small $15.00</label>
 
   <div class="sizes-input">
     <div class="sizes-input">
-        <input class="form-sizes-input" type="radio" value="medium" name="pizza size">
-      <label class="from-sizes-label" for="medium">Medium</label>
+        <input class="form-sizes-input" type="radio"  name="pizza size">
+      <label class="from-sizes-label" for="medium" value="medium">Medium $18.50</label>
 
   <div class="sizes-input">
       <div class="sizes-input">
           <input class="form-sizes-input" type="radio" value="large" name="pizza-size">
-      <label classs="form-sizes-label" for="large">Large</label>   
+      <label classs="form-sizes-label" for="large" value="large">Large $20.69</label>   
 </form>
 
 <form>
   </div><br><button type="submit" class="btn-primary" id="btn-submit">submit</button>
+  <button class="btn btn-warning ml-4" type="reset" id="reset-btn">Reset</button>
+  <h1 id="displayOrder"></h1>
 </form>
 </from>
 <br>

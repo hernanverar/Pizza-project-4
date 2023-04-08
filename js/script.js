@@ -1,70 +1,75 @@
 
 //Business Logic
 
-
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
-} 
-
-Pizza.prototype.checkedToppings = function() {
-  let toppings = 0;
-  if (this.toppings === "ham") {
-    return ham;
-  } else if (this.toppings === "pineapple") {
-    return pineapple;
-  } else {
-    alert ("please add toppings")
-  }
 }
-console.log(numToppings);
-//add toppings to Pizza
+
+Pizza.prototype.checkToppings = function() {
+    alert("Please add toppings.");
+}
+
 Pizza.prototype.toppingsAmount = function() {
-  if (this.toppings.length != 0){
-    let toppingPrice = this.topping.length * 2;
-    return toppingPrice;
+  if (this.toppings.length !== 0) {
+    let toppingsPrice = this.toppings.length * 2;
+    return toppingsPrice;
   } else {
-    alert ("Please choose your toppings!");
+    alert("Please choose your toppings!");
   };
 }
-// add size prices to our pizza
+
 Pizza.prototype.sizePrice = function() {
   let price = 0;
   if (this.size === "small") {
     price = 15.00; 
-  } else if (this.size === "medium" ) {
+  } else if (this.size === "medium") {
     price = 18.50;
   } else if (this.size === "large") {
-    price = 20.69
+    price = 20.69;
   } else {
-    alert ("please choose your Pizza size");
-  }
+    alert("Please choose your Pizza size.");
+  };
   this.sizePrice = price;
   return this.sizePrice;
 }
 
-// add Price to our Pizza
-Pizza.prototype.calculateCost = function(totalAmount, sizePrice) {
+Pizza.prototype.calculateCost = function() {
+  let totalAmount = this.toppingsAmount();
+  let sizePrice = this.sizePrice();
   let totalCost = totalAmount + sizePrice;
   this.calculateCost = totalCost;
   return this.calculateCost;
 }
 
-//UI Logic
-function displayIn() {
-  let size = document.querySelector("sizes-input;checked").value;
-  let toppings = [];
-  let checkedToppings = document.querySelectorAll(".toppings-input:checked);
-  checkedToppings.forEach(function(topping){
-    toppings.push(topping.value);
-  });
-  let pizza = new Pizza(toppings, size);
-  let totalAmount = pizza.toppingsAmount();
+function displayPrice(totalCost) {
+  const priceDisplay = document.querySelector("#price-display");
+  priceDisplay.innerHTML = `Total Cost: $${totalCost.toFixed(2)}`;
+  priceDisplay.classList.add("text-success");
 }
 
-window.addEventListener("load", function () {
-  document.getElementById("pizza-parlor").addEventListener("submit", function(){
-    e.preventDefault();
-    displayIn();
+// UI Logic
+
+function handlePizzaForm(event) {
+  event.preventDefault();
+  let size = document.querySelector("input[name='sizes']:checked").value;
+  let checkToppings = document.querySelectorAll(".form-check-input");
+  checkToppings.forEach(function(topping){
+    if (topping.checked) {
+      toppings.push(topping.value);
+    }
   });
-})
+  let pizza = new Pizza(toppings, size);
+  let toppings = pizza.checkToppings();
+  pizza.checkToppings();
+  let totalCost = pizza.calculateCost();
+  displayPrice(totalCost);
+}
+
+const reset = function () {
+  window.location.reload();
+};
+
+window.addEventListener("load", function () {
+  document.querySelector("#pizza-parlor-form").addEventListener("submit", handlePizzaForm);  
+});

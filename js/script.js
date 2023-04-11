@@ -6,17 +6,8 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.checkToppings = function() {
-    alert("Please add toppings.");
-}
-
-Pizza.prototype.toppingsAmount = function() {
-  if (this.toppings.length !== 0) {
-    let toppingsPrice = this.toppings.length * 2;
-    return toppingsPrice;
-  } else {
-    alert("Please choose your toppings!");
-  };
+Pizza.prototype.checkToppings = function(topping) {
+  this.toppings.push(topping);
 }
 
 Pizza.prototype.sizePrice = function() {
@@ -28,10 +19,18 @@ Pizza.prototype.sizePrice = function() {
   } else if (this.size === "large") {
     price = 20.69;
   } else {
-    alert("Please choose your Pizza size.");
+    alert ("please chose your toppings")
   };
+
   this.sizePrice = price;
   return this.sizePrice;
+}
+
+Pizza.prototype.toppingsAmount = function() {
+  if (this.toppings.length !== 0) {
+    let toppingsPrice = this.toppings.length * 1;
+    return toppingsPrice;
+  };
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -49,19 +48,15 @@ function displayPrice(totalCost) {
 }
 
 // UI Logic
-
 function handlePizzaForm(event) {
   event.preventDefault();
-  let size = document.querySelector("input[name='sizes']:checked").value;
-  let checkToppings = document.querySelectorAll(".form-check-input");
-  checkToppings.forEach(function(topping){
-    if (topping.checked) {
-      toppings.push(topping.value);
-    }
+  let size = document.getElementById("sizes-input").value;
+  let toppings = [];
+  let checkboxes = document.querySelectorAll('input[name="topping"]:checked');
+  checkboxes.forEach(function(checkbox) {
+    toppings.push(checkbox.value);
   });
   let pizza = new Pizza(toppings, size);
-  let toppings = pizza.checkToppings();
-  pizza.checkToppings();
   let totalCost = pizza.calculateCost();
   displayPrice(totalCost);
 }
@@ -71,5 +66,5 @@ const reset = function () {
 };
 
 window.addEventListener("load", function () {
-  document.querySelector("#pizza-parlor-form").addEventListener("submit", handlePizzaForm);  
+  document.querySelector("#pizza-form").addEventListener("submit", handlePizzaForm); 
 });

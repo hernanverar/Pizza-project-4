@@ -15,11 +15,9 @@ Pizza.prototype.sizePrice = function() {
   if (this.size === "small") {
     price = 15.00; 
   } else if (this.size === "medium") {
-    price = 18.50;
+    price = 17.50;
   } else if (this.size === "large") {
-    price = 20.69;
-  } else {
-    alert ("please chose your toppings")
+    price = 19.69;
   };
 
   this.sizePrice = price;
@@ -61,9 +59,11 @@ function handlePizzaForm(event) {
   displayPrice(totalCost);
 }
 
-const reset = function () {
-  window.location.reload();
-};
+function reset() {
+  document.getElementById("pizza-form").reset(); 
+  document.getElementById("price-display").innerHTML = ""; 
+  document.getElementById("price-display").style.display = "none";
+}
 
 window.addEventListener("load", function () {
   document.querySelector("#pizza-form").addEventListener("submit", handlePizzaForm); 

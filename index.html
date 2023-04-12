@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <title>Pizza Coxala</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Welcome to Pizza Coxala!!</h1>
 
     <img src="css/pizza.pic2.jpeg">
@@ -13,54 +13,54 @@
   <div class="form-group">
     <label for="name">Please print your Name :</label>
       <input type="text"  class="form-control" id="name" placeholder="Name">
-</div>
-  <br>
-<form id="pizza-form">
-  <div>
-    <label for="sizes-input">pick your Size:</label>
-    <select id="sizes-input" name="size">
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-    </select>
   </div>
   <br>
-  <img id="img2"src="css/pizza.pic.jpeg">
-  <br>
-  <div>
-      <label>Toppings:</label>
+  <form id="pizza-form">
     <div>
-      <input type="checkbox" id="topping1" name="topping" value="mushrooms">
-      <label for="topping1">Mushrooms</label>
+      <label for="sizes-input">pick your Size:</label>
+      <select id="sizes-input" name="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+    </div>
+    <br>
+    <img id="img2"src="css/pizza.pic.jpeg">
+    <br>
+    <div>
+        <label>Toppings:</label>
+      <div>
+        <input type="checkbox" id="topping1" name="topping" value="mushrooms">
+        <label for="topping1">Mushrooms</label>
+      </div>
+      <div>
+        <input type="checkbox" id="topping3" name="topping" value="pineapple">
+        <label for="topping3">pineapple</label>
+      </div>
+      <div>
+        <input type="checkbox" id="topping2" name="topping" value="ham">
+        <label for="topping2">ham</label>
+      </div>
+      <div>
+        <input type="checkbox" id="topping3" name="topping" value="onions">
+        <label for="topping3">Onions</label>
+      </div>
+      <div>
+        <input type="checkbox" id="topping3" name="topping" value="basil">
+        <label for="topping3">basil</label>
+      </div>
     </div>
     <div>
-      <input type="checkbox" id="topping3" name="topping" value="pineapple">
-      <label for="topping3">pineapple</label>
+      <button type="submit">Place Order</button>
+      <button type="button" onclick="reset()">Reset Form</button>
     </div>
-    <div>
-      <input type="checkbox" id="topping2" name="topping" value="ham">
-      <label for="topping2">ham</label>
-    </div>
-    <div>
-      <input type="checkbox" id="topping3" name="topping" value="onions">
-      <label for="topping3">Onions</label>
-    </div>
-    <div>
-      <input type="checkbox" id="topping3" name="topping" value="basil">
-      <label for="topping3">basil</label>
-    </div>
-  </div>
-  <div>
-    <button type="submit">Place Order</button>
-    <button type="button" onclick="reset()">Reset Form</button>
-  </div>
-</form>
-<h2><div id="price-display"></div></h2>
-<br>
-<img src="css/pizaa3.pic,jpeg.jpeg">
-
-  <div class="footer">Thank You Have a Nice Day !!!</div>
   </form>
+  <h2><div id="price-display"></div></h2>
+  <br>
+  <img src="css/pizaa3.pic,jpeg.jpeg">
 
-  </body>
+    <div class="footer">Thank You Have a Nice Day !!!</div>
+    </form>
+
+</body>
 </html>
